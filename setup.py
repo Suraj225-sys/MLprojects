@@ -16,12 +16,16 @@ def get_requirements(file_path:str)->List[str]:
     
     return requirements
 
-setup(
-name='mlproject',
-version='0.0.1',
-author='Suraj',
-author_email='surajsh0115@gmail.com',
-packages=find_packages(),
-install_requires=get_requirements('requirements.txt')
+# setup(
+# name='mlproject',
+# version='0.0.1',
+# author='Suraj',
+# author_email='surajsh0115@gmail.com',
+# packages=find_packages(),
+# install_requires=get_requirements('requirements.txt')
 
-)
+# )
+
+requirements = get_requirements('./requirements.txt')
+for i in range(len(requirements)):
+    print(requirements[i])
